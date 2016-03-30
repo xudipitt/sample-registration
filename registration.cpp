@@ -11,6 +11,14 @@ using namespace cv;
 using namespace std;
 //#define CHECK_STEP
 
+inline void check32f(Mat& src,Mat& dst){
+	if(src.type()==CV_32FC1){
+		src.copyTo(dst);
+	}else{
+		src.convertTo(dst,CV_32FC1);
+	}
+}
+
 static void dftMapping(Mat& src,Mat& dst);
 static float freqPolar(Mat& ref,Mat& src);
 static void tranShift(Mat& src,Point& offset);
