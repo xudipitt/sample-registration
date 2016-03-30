@@ -4,8 +4,11 @@
  *  Created on: 2016年3月28日
  *      Author: qq
  */
-#include <global.hpp>
-#include <vision.hpp>
+#include <opencv/cv.h>
+#include <opencv2/opencv.hpp>
+
+using namespace cv;
+using namespace std;
 //#define CHECK_STEP
 
 static void dftMapping(Mat& src,Mat& dst);
